@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-09-14 15:10:02 by Eclipse SUMO netedit Version 1.24.0
+<!-- generated on 2025-09-14 15:21:18 by Eclipse SUMO netedit Version 1.24.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -153,6 +153,19 @@
         <lane id="Node1-2-WB_0" index="0" speed="13.89" length="56.44" shape="-12.75,14.83 -69.19,14.44"/>
     </edge>
 
+    <tlLogic id="Node2" type="static" programID="0" offset="0">
+        <phase duration="42" state="rrGGGg"/>
+        <phase duration="3"  state="rrGyyy"/>
+        <phase duration="42" state="GGGrrr"/>
+        <phase duration="3"  state="yyGrrr"/>
+    </tlLogic>
+    <tlLogic id="Node5" type="static" programID="0" offset="0">
+        <phase duration="42" state="GgrrGG"/>
+        <phase duration="3"  state="yyrrGy"/>
+        <phase duration="42" state="rrGGGr"/>
+        <phase duration="3"  state="rryyGr"/>
+    </tlLogic>
+
     <junction id="J3" type="priority" x="66.25" y="-35.91" incLanes="E2_0 -E3_0" intLanes=":J3_0_0 :J3_1_0" shape="69.44,-32.72 63.05,-32.72 63.06,-39.12 66.61,-38.40 67.85,-37.51 68.74,-36.27 69.27,-34.67">
         <request index="0" response="00" foes="00" cont="0"/>
         <request index="1" response="00" foes="00" cont="0"/>
@@ -161,7 +174,7 @@
         <request index="0" response="00" foes="00" cont="0"/>
         <request index="1" response="00" foes="00" cont="0"/>
     </junction>
-    <junction id="Node2" type="priority" x="-5.57" y="16.48" incLanes="Node1-2-NB_0 -E1_0 Node1-2-EB_0" intLanes=":Node2_0_0 :Node2_1_0 :Node2_2_0 :Node2_3_0 :Node2_4_0 :Node2_6_0" shape="-8.67,9.27 -1.71,9.25 -1.26,11.49 -0.71,12.27 0.07,12.83 1.07,13.17 2.29,13.28 2.29,19.11 -12.78,19.11 -12.74,13.23 -10.50,12.80 -9.71,12.25 -9.15,11.48 -8.80,10.49">
+    <junction id="Node2" type="traffic_light" x="-5.57" y="16.48" incLanes="Node1-2-NB_0 -E1_0 Node1-2-EB_0" intLanes=":Node2_0_0 :Node2_1_0 :Node2_2_0 :Node2_3_0 :Node2_4_0 :Node2_6_0" shape="-8.67,9.27 -1.71,9.25 -1.26,11.49 -0.71,12.27 0.07,12.83 1.07,13.17 2.29,13.28 2.29,19.11 -12.78,19.11 -12.74,13.23 -10.50,12.80 -9.71,12.25 -9.15,11.48 -8.80,10.49">
         <request index="0" response="001000" foes="001000" cont="0"/>
         <request index="1" response="111000" foes="111000" cont="0"/>
         <request index="2" response="000000" foes="100000" cont="0"/>
@@ -177,7 +190,7 @@
         <request index="0" response="00" foes="00" cont="0"/>
         <request index="1" response="00" foes="00" cont="0"/>
     </junction>
-    <junction id="Node5" type="priority" x="-4.84" y="-36.05" incLanes="E3_0 Node1-2-SB_0 -E4_0" intLanes=":Node5_0_0 :Node5_6_0 :Node5_2_0 :Node5_3_0 :Node5_4_0 :Node5_5_0" shape="2.16,-39.24 2.15,-32.84 -0.07,-32.39 -0.85,-31.82 -1.40,-31.03 -1.73,-30.01 -1.84,-28.77 -8.14,-28.86 -8.55,-31.08 -9.10,-31.86 -9.87,-32.42 -10.86,-32.75 -12.08,-32.86 -12.07,-39.26">
+    <junction id="Node5" type="traffic_light" x="-4.84" y="-36.05" incLanes="E3_0 Node1-2-SB_0 -E4_0" intLanes=":Node5_0_0 :Node5_6_0 :Node5_2_0 :Node5_3_0 :Node5_4_0 :Node5_5_0" shape="2.16,-39.24 2.15,-32.84 -0.07,-32.39 -0.85,-31.82 -1.40,-31.03 -1.73,-30.01 -1.84,-28.77 -8.14,-28.86 -8.55,-31.08 -9.10,-31.86 -9.87,-32.42 -10.86,-32.75 -12.08,-32.86 -12.07,-39.26">
         <request index="0" response="000000" foes="001000" cont="0"/>
         <request index="1" response="110000" foes="111000" cont="1"/>
         <request index="2" response="100000" foes="100000" cont="0"/>
@@ -189,25 +202,25 @@
     <junction id=":Node2_6_0" type="internal" x="-11.29" y="17.33" incLanes=":Node2_5_0 -E1_0" intLanes=":Node2_1_0 :Node2_2_0 :Node2_3_0"/>
     <junction id=":Node5_6_0" type="internal" x="-1.75" y="-37.00" incLanes=":Node5_1_0 -E4_0" intLanes=":Node5_3_0 :Node5_4_0 :Node5_5_0"/>
 
-    <connection from="-E1" to="Node1-2-SB" fromLane="0" toLane="0" via=":Node2_2_0" dir="l" state="M"/>
-    <connection from="-E1" to="Node1-2-WB" fromLane="0" toLane="0" via=":Node2_3_0" dir="s" state="M"/>
+    <connection from="-E1" to="Node1-2-SB" fromLane="0" toLane="0" via=":Node2_2_0" tl="Node2" linkIndex="2" dir="l" state="O"/>
+    <connection from="-E1" to="Node1-2-WB" fromLane="0" toLane="0" via=":Node2_3_0" tl="Node2" linkIndex="3" dir="s" state="O"/>
     <connection from="-E2" to="-E1" fromLane="0" toLane="0" via=":Node3_0_0" dir="l" state="M"/>
     <connection from="-E3" to="-E2" fromLane="0" toLane="0" via=":J3_1_0" dir="l" state="M"/>
-    <connection from="-E4" to="Node1-2-NB" fromLane="0" toLane="0" via=":Node5_4_0" dir="l" state="M"/>
-    <connection from="-E4" to="-E3" fromLane="0" toLane="0" via=":Node5_5_0" dir="s" state="M"/>
+    <connection from="-E4" to="Node1-2-NB" fromLane="0" toLane="0" via=":Node5_4_0" tl="Node5" linkIndex="4" dir="l" state="O"/>
+    <connection from="-E4" to="-E3" fromLane="0" toLane="0" via=":Node5_5_0" tl="Node5" linkIndex="5" dir="s" state="O"/>
     <connection from="-E5" to="-E4" fromLane="0" toLane="0" via=":Node4_1_0" dir="l" state="M"/>
     <connection from="E1" to="E2" fromLane="0" toLane="0" via=":Node3_1_0" dir="r" state="M"/>
     <connection from="E2" to="E3" fromLane="0" toLane="0" via=":J3_0_0" dir="r" state="M"/>
-    <connection from="E3" to="E4" fromLane="0" toLane="0" via=":Node5_0_0" dir="s" state="M"/>
-    <connection from="E3" to="Node1-2-NB" fromLane="0" toLane="0" via=":Node5_1_0" dir="r" state="m"/>
+    <connection from="E3" to="E4" fromLane="0" toLane="0" via=":Node5_0_0" tl="Node5" linkIndex="0" dir="s" state="O"/>
+    <connection from="E3" to="Node1-2-NB" fromLane="0" toLane="0" via=":Node5_1_0" tl="Node5" linkIndex="1" dir="r" state="o"/>
     <connection from="E4" to="E5" fromLane="0" toLane="0" via=":Node4_0_0" dir="r" state="M"/>
     <connection from="E5" to="Node1-2-EB" fromLane="0" toLane="0" via=":Node1_1_0" dir="r" state="M"/>
-    <connection from="Node1-2-EB" to="E1" fromLane="0" toLane="0" via=":Node2_4_0" dir="s" state="M"/>
-    <connection from="Node1-2-EB" to="Node1-2-SB" fromLane="0" toLane="0" via=":Node2_5_0" dir="r" state="m"/>
-    <connection from="Node1-2-NB" to="Node1-2-WB" fromLane="0" toLane="0" via=":Node2_0_0" dir="l" state="m"/>
-    <connection from="Node1-2-NB" to="E1" fromLane="0" toLane="0" via=":Node2_1_0" dir="r" state="m"/>
-    <connection from="Node1-2-SB" to="-E3" fromLane="0" toLane="0" via=":Node5_2_0" dir="l" state="m"/>
-    <connection from="Node1-2-SB" to="E4" fromLane="0" toLane="0" via=":Node5_3_0" dir="r" state="m"/>
+    <connection from="Node1-2-EB" to="E1" fromLane="0" toLane="0" via=":Node2_4_0" tl="Node2" linkIndex="4" dir="s" state="O"/>
+    <connection from="Node1-2-EB" to="Node1-2-SB" fromLane="0" toLane="0" via=":Node2_5_0" tl="Node2" linkIndex="5" dir="r" state="o"/>
+    <connection from="Node1-2-NB" to="Node1-2-WB" fromLane="0" toLane="0" via=":Node2_0_0" tl="Node2" linkIndex="0" dir="l" state="o"/>
+    <connection from="Node1-2-NB" to="E1" fromLane="0" toLane="0" via=":Node2_1_0" tl="Node2" linkIndex="1" dir="r" state="o"/>
+    <connection from="Node1-2-SB" to="-E3" fromLane="0" toLane="0" via=":Node5_2_0" tl="Node5" linkIndex="2" dir="l" state="o"/>
+    <connection from="Node1-2-SB" to="E4" fromLane="0" toLane="0" via=":Node5_3_0" tl="Node5" linkIndex="3" dir="r" state="o"/>
     <connection from="Node1-2-WB" to="-E5" fromLane="0" toLane="0" via=":Node1_0_0" dir="l" state="M"/>
 
     <connection from=":J3_0" to="E3" fromLane="0" toLane="0" dir="r" state="M"/>
