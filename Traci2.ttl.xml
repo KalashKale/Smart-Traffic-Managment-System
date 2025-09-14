@@ -1,0 +1,23 @@
+<additionals>
+
+    <!-- Node2: fixed to avoid east-west & north-south conflict -->
+    <tlLogic id="Node2" type="static" programID="0" offset="0">
+    <!-- Phase A: Northbound (Node1 -> Node2) -->
+    <phase duration="30" state="GGrrrr"/>
+    <phase duration="3"  state="yyrrrr"/>
+    
+    <!-- Phase B: Westbound + Eastbound -->
+    <phase duration="30" state="rrGGGG"/>
+    <phase duration="3"  state="rryyyy"/>
+    </tlLogic>
+
+
+    <!-- Node5: unchanged, 2-phase cycle -->
+    <tlLogic id="Node5" type="static" programID="0" offset="0">
+        <phase duration="30" state="GgrrGG"/>
+        <phase duration="3"  state="yyrrGy"/>
+        <phase duration="30" state="rrGGGr"/>
+        <phase duration="3"  state="rryyGr"/>
+    </tlLogic>
+
+</additionals>
