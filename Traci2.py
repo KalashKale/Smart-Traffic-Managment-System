@@ -15,7 +15,7 @@ import traci
 # Step 4: Define SUMO configuration
 Sumo_config = [
     'sumo-gui',
-    '-c', r"E:\Programming\Projects\SIH 2025\Traffic Simulation\TLS\Traci\Traci2\Traci2.sumocfg",
+    '-c', r"E:\Programming\Projects\SIH 2025\Traffic Simulation\TLS\Traci\Traci 2 GitHub\Smart-Traffic-Managment-System\Traci2.sumocfg",
     '--step-length', '0.05',
     '--delay', '1000',
     '--lateral-resolution', '0.1'
